@@ -1,0 +1,54 @@
+@font-face{
+    font-family: NotoSansLight;
+    src: url(../font/NotoSansKR-Light.otf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: NotoSans;
+    src: url(../font/NotoSansKR-Regular.otf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: NotoSansMidium;
+    src: url(../font/NotoSansKR-Medium.otf);
+    font-weight: 400;
+
+}
+
+@font-face{
+    font-family: NotoSansBold;
+    src: url(../font/NotoSansKR-Bold.otf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: NotoSansBlack;
+    src: url(../font/NotoSansKR-Black.otf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url(../font/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: RobotoItalic;
+    src: url(../font/Roboto-MediumItalic.ttf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: RobotoItalicBlack;
+    src: url(../font/Roboto-BlackItalic.ttf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: Koulen;
+    src: url(../font/Koulen-Regular.ttf);
+    font-weight: 400;
+}
