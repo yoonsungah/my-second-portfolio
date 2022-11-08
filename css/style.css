@@ -176,10 +176,10 @@ header .sub{
 
 /* #mainBanner */
 #mainBanner{
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 814px;
     /* background-color: tomato; */
 }
 #mainBanner .bannerWrap{
@@ -189,7 +189,7 @@ header .sub{
     height: 100%;
 }
 #mainBanner .bannerWrap>div{
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
 }
 /* fadein fadeout할때 말곤 주석처리하기 */
@@ -197,7 +197,8 @@ header .sub{
     opacity: 0;
     transition: all 1.5s;
     position: absolute;
-    top: 0; left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 100%;
 }
 /* fadein fadeout할때 말곤 주석처리하기 */
@@ -205,45 +206,46 @@ header .sub{
     position: relative;
 }
 .banImg img{
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
 }
 /* -----위까지 fade-in fade-out css처리 */
 
-.banImg h1{
+.bannerWrap h1{
     color: white;
     font-family: Koulen, Arial, Helvetica, sans-serif;
     position: absolute;
 }
-.firstBanner .banImg h1{
+.firstBanner h1{
     top: 360px;
-    right: 50px;
+    right: 15%;
 }
-.secondBanner .banImg h1{
+.secondBanner h1{
     display: block;
-    top: 130px;
-    transform: translateY(-55%);
-    right: 170px;
+    top: 300px;
+    transform: translateX(-50%);
+    left: 50%;
 }
-.secondBanner .banImg p{
+.secondBanner p{
     display: block;
-    top: 200px;
-    transform: translateY(-45%);
-    right: 100px;
+    top: 360px;
+    transform: translateX(-50%);
+    left: 50%;
     color: white;
     font-size: 2.5em;
     font-weight: bold;
     position: absolute;
 }
-.secondBanner .banImg .wLogo{
+.secondBanner .wLogo{
     display: block;
     position: absolute;
-    top: 300px;
-    right: 280px;
+    top: 420px;
+    transform: translateX(-50%);
+    left: 50%;
     width: 50px;
     height: 50px;
 }
-.secondBanner .banImg .wLogo img{
+.secondBanner .wLogo img{
     width: 100%;
     height: 100%;
 }
@@ -260,7 +262,7 @@ header .sub{
 .active{
     display: block;
     position: absolute;
-    padding-top: 30px;
+    padding-top: 35px;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
@@ -291,11 +293,11 @@ header .sub{
     /* 1. topSaleWrap */
 .topSaleWrap{
     /* background-color: yellowgreen; */
-    margin-top: 30px;
+    margin-top: 80px;
 }
 .topSaleWrap .innerBox{
     /* background-color: turquoise; */
-    padding: 0 10px;
+    padding: 80px 10px;
     overflow: hidden;
 }
 .saleTitle>div{
@@ -318,7 +320,7 @@ header .sub{
     display: flex;
     justify-content: space-between;
     width: 150%;
-    position: relative;;
+    position: relative;
 }
 .topSaleWrap ul>li{
     width: calc(100% / 4);
@@ -356,13 +358,13 @@ header .sub{
 
     /* 2. SaleWrap */
 .saleWrap{
-    margin-top: 140px;
+    margin-top: 80px;
     width: 100%;
 }
 .saleImgBox{
     z-index: 1;
     position: relative;
-    /* background-color: tomato; */
+    background-color: tomato;
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -370,7 +372,7 @@ header .sub{
     overflow: hidden;
 }
 .saleImgBox img{
-    width: 100%;
+    height: 100%;
 }
 .saleWrap a{
     text-align: center;
@@ -738,7 +740,7 @@ header .sub{
     height: 100%;
 }
 .joinWrap .joinImgBox>img{
-    width: 100%;
+    /* width: 100%; */
     opacity: 0.5;
 }
 .joinWrap .joinTxt{
@@ -748,7 +750,7 @@ header .sub{
     position: absolute;
     top: 40%;
     line-height: 1.2;
-    margin-left: 25%;
+    margin-left: 20%;
 }
 .joinWrap a{
     display: block;
@@ -784,7 +786,7 @@ footer .footTop .innerBox{
     display: flex;
 }
 footer .footMenuWrap ul{
-    margin: 10px 100px;
+    margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -805,14 +807,35 @@ footer .footBottom p{
 }
 
 /* 모바일 반응형 시작 */
+@media screen and (max-width:1768px) {
+    .firstBanner h1{
+        right: 18%;
+    }
+    .saleWrap .saleName,
+    .saleWrap .saleDate{
+        right: 10%;
+    }
+}
+@media screen and (max-width:1600px) {
+    .firstBanner h1{
+        font-size: 3.5em;
+        right: 20%;
+    }
+    .joinWrap .joinTxt{
+        font-size: 2em;
+    }
+    .joinWrap a{
+        font-size: 1.5em;
+        top: 40%;
+    }
+}
 @media screen and (max-width:1366px) {
     #mainBanner{
     }
-    .firstBanner .banImg h1{
-        top: 180px;
-        font-size: 3.3em;
+    .firstBanner h1{
+        right: 55%;
     }
-    .secondBanner .banImg h1{
+    .secondBanner h1{
         font-size: 3em;
     }
     /* .banTextWrap */
@@ -973,8 +996,9 @@ footer .footBottom p{
     /* 여기까지 햄버거 */
     /*  */
     /*  */
-
-
+    header .logo{
+        left: 20px;
+    }
 }
 @media screen and (max-width:1024px){
     /* 1. topSaleWrap */
@@ -1001,18 +1025,34 @@ footer .footBottom p{
         font-size: 1.5em;
     }
      /* 4. newsWrap */
-    .newsWrap ul>li{
-        height: 350px;
+     .newsWrap>div:first-child{
+        height: 650px;
+        margin-top: -50px;
     }
-    .newsWrap ul>.on{
-        height: 400px;
+     .newsWrap h2{
+        font-size: 2.5em;
+    }
+    .newsWrap ul{
+        display: block;
+    }
+    .newsWrap ul>li{
+        margin: 10px auto;
+        width: 60%;
+        border-radius: 0px;
     }
     .newsTxt{
-        padding: 35px 15px 35px 10px;
+        word-break: keep-all;
+        padding: 20px 10px;
     }
-    .newsBtn{
-        font-size: 1.2em;
-        margin-top: 10px;
+    .newsWrap ul>li{
+        height: 100px;
+    }
+    .newsWrap .newsImgBox{
+        display: none;
+    }
+    .newsWrap ul>.on{
+        margin: 0 auto;
+        height: 100px;
     }
      /* 5. snsWrap */
     .snsWrap h2{
@@ -1048,11 +1088,8 @@ footer .footBottom p{
         height: 500px;
         font-size: 1.1em;
     }
-    footer .footMenuWrap ul{
-        margin: 10px 80px;
-    }
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:820px){
     /* 1. topSaleWrap */
     .saleTitle>div h2{
         font-size: 2.5em;
@@ -1088,29 +1125,8 @@ footer .footBottom p{
         font-size: 1.3em;
         padding: 10px 20px;
     }
-     /* 4. newsWrap */
-     .newsWrap h2{
-        font-size: 2.5em;
-    }
-    .newsTxt{
-        word-break: keep-all;
-        padding: 20px 10px;
-    }
-    .newsTitle{
-        font-size: 1.2em;
-    }
-    .newsCont{
-        font-size: 1em;
-    }
-    .newsWrap .newsImgBox>img{
-        scale: calc(2);
-    }
-    .newsWrap ul>.on{
-        margin-top: -50px;
-    }
-    .newsWrap ul>.on img{
-        scale: calc(2.5);
-    }
+
+
     /* 6. joinWrap */
     .joinWrap .joinTxt{
         font-size: 1.5em;
@@ -1128,16 +1144,83 @@ footer .footBottom p{
     }
     /* footer */
     footer .footMenuWrap ul{
-        margin: 10px 50px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
 }
 
+@media screen and (max-width:740px){
+    .saleWrap .upTo{
+        display: none;
+    }
+    .saleWrap .num{
+        display: none;
+    }
+    .saleWrap .saleName{
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2em;
+        color: #007BC6;
+        width: 100%;
+    }
+    .saleWrap .saleDate{
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.7em;
+        color: #555;
+    }
+        /* 6. joinWrap */
+        .joinWrap .joinTxt{
+            font-size: 1.5em;
+            top: 35%;
+            margin-left: 5%;
+        }
+        .joinWrap a{
+            font-size: 1.3em;
+            padding: 15px 15px;
+            top: 32%;
+            left: 40%;
+        }
+        .joinWrap a img{
+            width: 25%;
+        }
+}
+@media screen and (max-width:600px){
+    /* topSale */
 
+    /* sns */
+    .snsBtn{
+        width: 80%;
+    }
+    .snsBoxWrap{
+        display: none;
+    }
+    /* 6. joinWrap */
+    .joinWrap .joinTxt{
+        font-size: 1.3em;
+        top: 30%;
+        margin-left: 5%;
+    }
+    .joinWrap a{
+        font-size: 1.1em;
+        padding: 15px;
+        top: 32%;
+        left: 70%;
+    }
+    .joinWrap a img{
+        display: none;
+    }
+}
 
 @media screen and (max-width:400px){
+    /* header */
+    header .topEvent>a{
+        font-size: 0.9em;
+
+    }
     /* mainBanner */
     .banText {
         width: 100%;
@@ -1149,5 +1232,17 @@ footer .footBottom p{
     .active div{
         width: 100%;
         word-break: keep-all;
+    }
+     /* 4. newsWrap */
+    .newsWrap ul>li{
+        margin: 10px auto;
+        width: 90%;
+        border-radius: 0px;
+    }
+
+    /* footer */
+    footer{
+        height: 100%;
+        font-size: 0.9em;
     }
 }
