@@ -73,6 +73,7 @@ $(function(){
         //topSale slide
         let list = $('.topSaleUl');
         let length = list.children().length;
+        let innerSize = 600;
         let topCount = 4;
         //.topSaleUl>li의 넓이와 높이를 설정
         list.css('width', 100 * length /topCount+ '%');
@@ -123,7 +124,39 @@ $(function(){
             time2 = setInterval(function () {
                 $('.rightBtn').trigger('click');
             }, 5000);
-        }
+        };
+        // 리사이즈 이벤트
+        let winWidth=$(window).width();
+
+        function resizeInit(){
+            //topSale 리사이즈
+            //inner박스보다 화면사이즈가 크면 제품 4개가 보이고
+            //inner박스보다 화면사이즈가 작으면 제품 2개만 보이도록 했음
+            if (winWidth > innerSize) {
+                topCount2 = 3
+                topCount = 4
+            }
+            else {
+                topCount2 = 2
+                topCount = 2
+            }
+            list.css('width', 100 * length /topCount+ '%');
+            list2.css('width', 100 * length2 /topCount2 + '%');
+            listWidth = list.children().outerWidth();
+            listWidth2 = list2.children().outerWidth();
+        };
+    
+        resizeInit();
+    
+        $(window).on("resize",function(){
+            resizeInit();
+        });
+
+
+
+
+
+
 
         //newWrap height
         $('.newsWrapUl>li').on({
